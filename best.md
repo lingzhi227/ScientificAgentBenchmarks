@@ -22,7 +22,7 @@
 | Benchmark | 最佳模型/系统 | 分数 | 执行流程 |
 |-----------|-------------|------|---------|
 | **RULER** | Jamba-1.5-Large | **96.0%** avg (4K-128K) | SSM-Attention混合架构，O(n)内存扩展 |
-| **LongBench v2** | Gemini 3 Pro | **68.2%** | 原生1M+ token上下文窗口 + CoT推理；人类专家53.7% |
+| **LongBench v2** | Gemini 3 Pro | **68.2%** (w/ CoT) | 原生1M+ token上下文窗口 + CoT推理；人类专家53.7%。**Our result**: Qwen3.5-27B thinking >61% (#4), nothink 59.7% (**nothink SOTA**, +6.8pp over MiniMax-Text-01, 超越human baseline) |
 | **InfiniteBench** | GPT-4 (原始评估) | 检索100%，理解22-72% | 128K原生窗口；2025模型尚未大规模重新评估 |
 | **BABILong** | ARMT/RMT (微调, 137M参数) | 近乎完美至**50M tokens** | 循环记忆增强Transformer，分段压缩+传递；标准LLM仅用~10%有效窗口 |
 | **SCBench** | Qwen2.5-72B + MInference | **50.1-52.9%** | MInference动态稀疏注意力，O(n)内存+亚O(n²)预填充 |

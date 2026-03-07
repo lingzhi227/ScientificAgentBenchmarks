@@ -1,7 +1,9 @@
 # Ignore everything
 *
 
-# Track only the two markdown files and .gitignore
+# Track only markdown files and .gitignore
 !README.md
 !best.md
 !.gitignore
+!LongBench/
+!LongBench/*.md
